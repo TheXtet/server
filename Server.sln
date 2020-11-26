@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.64
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{4CBFE27C-F428-43C1-BC92-DED796547000}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grains", "Grains\Grains.csproj", "{F1F1501C-8A45-486B-A15C-BE76458A0B08}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Interfaces\Interfaces.csproj", "{01829E97-24EA-4D60-96C4-EC0BA80A77DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CBFE27C-F428-43C1-BC92-DED796547000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CBFE27C-F428-43C1-BC92-DED796547000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CBFE27C-F428-43C1-BC92-DED796547000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CBFE27C-F428-43C1-BC92-DED796547000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1F1501C-8A45-486B-A15C-BE76458A0B08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F1501C-8A45-486B-A15C-BE76458A0B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1F1501C-8A45-486B-A15C-BE76458A0B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F1501C-8A45-486B-A15C-BE76458A0B08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01829E97-24EA-4D60-96C4-EC0BA80A77DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01829E97-24EA-4D60-96C4-EC0BA80A77DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01829E97-24EA-4D60-96C4-EC0BA80A77DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01829E97-24EA-4D60-96C4-EC0BA80A77DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2EE7CC8-49BD-4564-A03B-6573F6832BB0}
+	EndGlobalSection
+EndGlobal
