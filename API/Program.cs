@@ -51,7 +51,7 @@ namespace API
                         {
                             parts.AddApplicationPart(typeof(UsersGrain).Assembly).WithReferences();
                             parts.AddApplicationPart(typeof(CriteriaGrain).Assembly).WithReferences();
-                            parts.AddApplicationPart(typeof(IUsers).Assembly).WithReferences();
+                            parts.AddApplicationPart(typeof(IFormula).Assembly).WithReferences();
                             parts.AddApplicationPart(typeof(ICriteria).Assembly).WithReferences();
                         });
                 })
