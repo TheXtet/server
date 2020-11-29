@@ -30,7 +30,7 @@ namespace API
                             options.AccountEndpoint = "https://xtet.documents.azure.com:443/";
                                                               
                             // TODO: Insert key
-                            options.AccountKey = "";
+                            options.AccountKey = "fL2MFlfruPdVhvul5AieIrM1LFL2NrLj7fY8J7ExZOIDcMMe2mT1X6xhVZlkCBU5MOOuAuxPleKOUJZ4tKXxqQ==";
                             options.DB = "DatabaseName";
 
                             // options.Collection = "Users";
