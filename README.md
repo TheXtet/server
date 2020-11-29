@@ -1,9 +1,8 @@
 ## Hello, World! <img src="https://raw.githubusercontent.com/iampavangandhi/iampavangandhi/master/gifs/Hi.gif" width="30px"></h2>
-<img align="right" alt="GIF" src="https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif" />
-
-
 [![Board Status](https://dev.azure.com/LeftTwixWand/7f5baacb-570d-4022-82ca-f03cfade00d5/66c7c39c-d091-4155-a3f3-574276d22510/_apis/work/boardbadge/a830fb4c-fede-4059-8dc7-4f6e773d7e9b)](https://dev.azure.com/LeftTwixWand/7f5baacb-570d-4022-82ca-f03cfade00d5/_boards/board/t/66c7c39c-d091-4155-a3f3-574276d22510/Microsoft.RequirementCategory/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/TheXtet/server/blob/master/LICENSE)
+
+<img align="right" alt="GIF" src="https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif" />
 
 ### server это:
 - ASP.NET Core Web Api 
