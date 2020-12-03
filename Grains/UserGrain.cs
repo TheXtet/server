@@ -66,6 +66,18 @@ namespace Grains
 
             await this.WriteStateAsync();
         }
+
+        public async Task SetAdmin(bool state)
+        {
+            this.State.IsAdmin = state;
+            await WriteStateAsync();
+        }
+
+        public async Task SetPassword(string password)
+        {
+            this.State.Password = password;
+            await this.WriteStateAsync();
+        }
     }
 
     public class UserArchive

@@ -30,23 +30,26 @@ namespace API.Controllers
             string login = "username5";
 
             var user = _client.GetGrain<IUser>(login);
+            await user.SetPassword("55555");
 
-            await _client.GetGrain<IUsers>(0).Add(login);
+            //await _client.GetGrain<IUsers>(0).Add(login);
 
-            List<CriteriaDTO> criterias = new List<CriteriaDTO>();
-            foreach (var item in await _grain.Get())
-            {
-                criterias.Add(new CriteriaDTO(item.Name, item.Abbreviation, item.IsEnabled, new Random().Next(45)));
-            }
+            //List<CriteriaDTO> criterias = new List<CriteriaDTO>();
+            //foreach (var item in await _grain.Get())
+            //{
+            //    criterias.Add(new CriteriaDTO(item.Name, item.Abbreviation, item.IsEnabled, new Random().Next(45)));
+            //}
 
-            await user.Update(new UserDTO(login,
-                                          "Евгений",
-                                          "Коновалов",
-                                          "Сотрудник",
-                                           new WebClient().DownloadData("https://studiolorier.com/wp-content/uploads/2018/10/Profile-Round-Sander-Lorier.jpg"),
-                                           false,
-                                           16500,
-                                           criterias));
+            //await user.Update(new UserDTO(login,
+            //                              "Егор",
+            //                              "Андреев",
+            //                              "Администратор",
+            //                               new WebClient().DownloadData("https://www.pngfind.com/pngs/m/317-3177131_636682202684372240-user-profile-photo-round-hd-png-download.png"),
+            //                               true,
+            //                               16500,
+            //                               criterias));
+
+
 
             return await Task.FromResult("Completed");
         }

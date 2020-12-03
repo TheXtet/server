@@ -28,7 +28,8 @@ namespace Interfaces
         Task<byte[]> GetProfileImage();
         
         Task SetProfileImage(byte[] data);
-
+        Task SetPassword(string v);
+        Task SetAdmin(bool state);
         Task<bool> IsAdmin();
 
         Task<double> GetSalary();
