@@ -2,6 +2,8 @@
 using Interfaces.DTO;
 using Microsoft.AspNetCore.Mvc;
 using Orleans;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace API.Controllers
@@ -15,6 +17,21 @@ namespace API.Controllers
         public UserController(IGrainFactory client)
         {
             _client = client;
+        }
+
+        // GET: api/user
+        [HttpGet]
+        public async Task<IEnumerable<UserDTO>> Get() 
+        {
+            List<UserDTO> users = new List<UserDTO>();
+
+            IUsers usersGrain = _client.GetGrain<IUsers>(0);
+            foreach (var userName in await usersGrain.Get())
+            {
+                users.Add(await _client.GetGrain<IUser>(userName).Get());
+            }
+
+            return await Task.FromResult(users.AsEnumerable());
         }
 
         // GET: api/user/username

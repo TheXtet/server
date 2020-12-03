@@ -72,10 +72,10 @@ namespace Grains
     {
         public string Password { get; set; }
         public string Name { get; set; }
+        public string SurName { get; set; }
         public string Position { get; set; }
         public byte[] ProfileImage { get; set; }
         public double Sallary { get; internal set; }
-        public string SurName { get; internal set; }
         public bool IsAdmin { get; internal set; }
         public List<CriteriaDTO> Criterias { get; } = new List<CriteriaDTO>();
     }
