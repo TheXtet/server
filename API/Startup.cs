@@ -27,6 +27,7 @@ namespace API
                                   {
                                       builder.AllowAnyOrigin();
                                       builder.AllowAnyHeader();
+                                      builder.AllowAnyMethod();
                                   });
             });
 

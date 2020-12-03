@@ -34,6 +34,6 @@ namespace Interfaces
         Task<double> GetSalary();
         
         Task<UserDTO> Get();
-        Task Update(UserLoginDTO user);
+        Task Update(UserDTO user);
     }
 }

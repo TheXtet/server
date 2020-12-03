@@ -27,6 +27,6 @@ namespace API.Controllers
 
         // POST api/user
         [HttpPost]
-        public Task Post([FromBody] UserLoginDTO user) => _client.GetGrain<IUser>(user.UserName).Update(user);
+        public Task Post([FromBody] UserDTO user) => _client.GetGrain<IUser>(user.Login).Update(user);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Interfaces;
 using Interfaces.DTO;
 using Orleans;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Grains
@@ -39,14 +40,16 @@ namespace Grains
             await this.WriteStateAsync();
         }
 
-        public Task<UserDTO> Get() => Task.FromResult(new UserDTO(this.State.Name,
+        public Task<UserDTO> Get() => Task.FromResult(new UserDTO(this.IdentityString,
+                                                                  this.State.Name,
                                                                   this.State.SurName,
                                                                   this.State.Position,
                                                                   this.State.ProfileImage,
                                                                   this.State.IsAdmin,
-                                                                  this.State.Sallary));
+                                                                  this.State.Sallary,
+                                                                  this.State.Criterias));
 
-        public async Task Update(UserLoginDTO user)
+        public async Task Update(UserDTO user)
         {
             this.State.Name = user.Name;
             this.State.SurName = user.SurName;
@@ -54,6 +57,12 @@ namespace Grains
             this.State.Sallary = user.Sallary;
             this.State.Position = user.Position;
             this.State.IsAdmin = user.IsAdmin;
+
+            this.State.Criterias.Clear();
+            foreach (var item in user.Criterias)
+            {
+                this.State.Criterias.Add(item);
+            }
 
             await this.WriteStateAsync();
         }
@@ -68,5 +77,6 @@ namespace Grains
         public double Sallary { get; internal set; }
         public string SurName { get; internal set; }
         public bool IsAdmin { get; internal set; }
+        public List<CriteriaDTO> Criterias { get; } = new List<CriteriaDTO>();
     }
 }
