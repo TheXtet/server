@@ -27,10 +27,12 @@ namespace API.Controllers
         [HttpGet]
         public async Task<string> Get()
         {
-            string login = "username5";
+            string login = "username1";
 
             var user = _client.GetGrain<IUser>(login);
-            await user.SetPassword("55555");
+            await user.SetAdmin(true);
+
+            //await user.SetPassword("55555");
 
             //await _client.GetGrain<IUsers>(0).Add(login);
 

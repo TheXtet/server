@@ -40,7 +40,7 @@ namespace Grains
             await this.WriteStateAsync();
         }
 
-        public Task<UserDTO> Get() => Task.FromResult(new UserDTO(this.IdentityString,
+        public Task<UserDTO> Get() => Task.FromResult(new UserDTO(this.GetGrainIdentity().PrimaryKeyString,
                                                                   this.State.Name,
                                                                   this.State.SurName,
                                                                   this.State.Position,
